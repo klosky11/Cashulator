@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="header-title">cashulator</h1>
+
+      <nav>
+        <ul class="navigation">
+          <li>
+            <a
+              class="nav-list"
+              id="spendingCategoriesHover"
+              href="#moneyPerCategoryNav"
+              >Share Budget</a
+            >
+          </li>
+          <li>
+            <a class="nav-list" id="weeklySpendingNav" a href="#moneySpentNav"
+              >Expenses</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-list"
+              id="remainingBalanceNav"
+              href="#remainingBudgetNav"
+              >Remaining Balance</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main-container">
+      <section id="uiSection">
+        <div id="incomeSection">
+          <form id="incomeForm">
+            <label id="weeklyIncomeDisplay" for="weeklyIncomeInput"
+              >Weekly Income: $0</label
+            >
+            <input
+              type="number"
+              min="0"
+              step="0.01"
+              onkeydown="return event.keyCode !== 69 && event.keyCode !== 189"
+              `
+              id="weeklyIncomeInput"
+              name="weeklyIncomeInput"
+              placeholder="Enter amount"
+            />
+            <button id="updateIncomeButton">Update Income</button>
+          </form>
+        </div>
+
+        <div id="expenseSection">
+          <form id="expenseForm">
+            <label for="weeklyExpenseInput">Weekly Expenses</label>
+            <select id="expenseDropdown">
+              <option value="">Pick One</option>
+              <option value="4">Bills</option>
+              <option value="3">Food</option>
+              <option value="2">Clothing</option>
+              <option value="1">Entertainment</option>
+              <option value="0">Misc</option>
+            </select>
+            <input
+              type="number"
+              min="0.01"
+              id="weeklyExpenseInput"
+              name="weeklyExpenseInput"
+              placeholder="Enter amount"
+            />
+            <input
+              type="text"
+              id="weeklyExpenseName"
+              name="weeklyExpenseName"
+              placeholder="Enter name"
+            />
+            <button id="addExpenseButton">Add Expense</button>
+          </form>
+        </div>
+
+        <div id="balanceSection">
+          <h1 id="remainingBalance">Balance: $0</h1>
+        </div>
+      </section>
+      <section id="pieContainer">
+        <div id="totalSummary">
+          <h1 class="subHeader">Total Summary:</h1>
+          <div id="piechart" style="width: 400px; height: 200px"></div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <p class="foot-header">cashulator</p>
+    </footer>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

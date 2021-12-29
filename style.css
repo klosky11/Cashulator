@@ -1,0 +1,127 @@
+body,
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  padding: 20px;
+}
+
+#header-title {
+  font-size: 20pt;
+}
+
+/* Nav List */
+
+ul {
+  list-style: none;
+}
+
+.nav-list {
+  color: #69696a;
+  font-size: 9pt;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main-container {
+  margin-top: 15px;
+}
+#balanceSection {
+  margin-top: 20px;
+}
+#incomeForm {
+  display: flex;
+  flex-direction: column;
+}
+#expenseForm {
+  margin: 20px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.billsClass {
+  color: blue;
+}
+.foodClass {
+  color: red;
+}
+.clothingClass {
+  color: orange;
+}
+.entertainmentClass {
+  color: green;
+}
+.miscClass {
+  color: purple;
+}
+
+/* #piechart {
+  
+} */
+
+.footer {
+  position: fixed;
+  display: flex;
+  background-color: rgba(247, 193, 162, 0.7);
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+.foot-header {
+  padding-left: 10px;
+  padding-bottom: 4px;
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  .nav-list {
+    padding: 10px;
+  }
+  #remainingBalanceNav {
+    border-radius: 30px;
+    width: 100%;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+  }
+
+  #main-container {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  #uiSection {
+    flex: 1;
+  }
+
+  #pieContainer {
+    flex: 1;
+  }
+
+  #incomeForm {
+    margin-right: 50px;
+  }
+  #expenseForm {
+    margin-right: 50px;
+  }
+}
